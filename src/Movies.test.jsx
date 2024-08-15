@@ -4,35 +4,45 @@ import Movies from "./Movies";
 const movies = [
   {
     id: 1,
-    name: "The Incredibles",
-    isLiked: false,
+    title: "Hulky Hulk - Smash",
+    isLiked: true,
   },
   {
     id: 2,
-    name: "Resident Evil",
+    title: "Spiderman - The Web Slinger",
     isLiked: true,
   },
   {
     id: 3,
-    name: "Lord of the React",
-    isLiked: true,
+    title: "Ironman - The Genius",
+    isLiked: false,
+  },
+  {
+    id: 4,
+    title: "Captain America - The First Avenger",
+    isLiked: false,
   },
 ];
 
 test("renders the movie list", () => {
   render(<Movies movies={movies} />);
-  const incrediblesHeadline = screen.getByRole("heading", {
-    name: "The Incredibles",
+  const headlineHulk = screen.getByRole("heading", {
+    name: "Hulky Hulk - Smash",
   });
-  expect(incrediblesHeadline).toBeInTheDocument();
+  expect(headlineHulk).toBeInTheDocument();
 
-  const residentEvilHeadline = screen.getByRole("heading", {
-    name: "Resident Evil",
+  const headlineSpider = screen.getByRole("heading", {
+    name: "Spiderman - The Web Slinger",
   });
-  expect(residentEvilHeadline).toBeInTheDocument();
+  expect(headlineSpider).toBeInTheDocument();
 
-  const lordHeadline = screen.getByRole("heading", {
-    name: "Lord of the React",
+  const headlineIronman = screen.getByRole("heading", {
+    name: "Ironman - The Genius",
   });
-  expect(lordHeadline).toBeInTheDocument();
+  expect(headlineIronman).toBeInTheDocument();
+
+  const headlineCaptain = screen.getByRole("heading", {
+    name: "Captain America - The First Avenger",
+  });
+  expect(headlineCaptain).toBeInTheDocument();
 });

@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
-import { describe } from "vitest";
 import App from "./App";
 
-describe("App", () => {
-  it("should contain the text 'Vite + React'", async () => {
+describe("Testing the App component", () => {
+  it("should contain the heading 'React Component Testing'", async () => {
     render(<App />);
-    expect(await screen.findByText("Vite + React")).toBeDefined();
+    const heading = await screen.findByText("React Component Testing");
+    expect(heading).toBeInTheDocument();
   });
 });

@@ -1,12 +1,11 @@
 export default function Movies({ movies }) {
   return (
-    <section>
+    <ul>
       {movies.map((movie) => (
-        <div key={movie.id}>
-          <h2>{movie.name}</h2>
-          <button>{movie.isLiked === true ? "Unlike" : "Like"}</button>
-        </div>
+        <li key={movie.id}>
+          <h2>{movie.title}</h2>
+        </li>
       ))}
-    </section>
+    </ul>
   );
 }

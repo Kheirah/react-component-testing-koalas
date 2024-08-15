@@ -1,4 +1,3 @@
-import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -7,24 +6,27 @@ import Movies from "./Movies";
 const movies = [
   {
     id: 1,
-    name: "Best movie ever!!1",
+    title: "Koala-ty Time: The Ultimate Chill",
     isLiked: true,
   },
   {
     id: 2,
-    name: "Hulky Hulk",
+    title: "Jurassic Bark: Rise of the Koalas",
     isLiked: true,
   },
   {
     id: 3,
-    name: "Ninja Coder",
+    title: "Koala-fied to Party",
+    isLiked: false,
+  },
+  {
+    id: 4,
+    title: "Koala Wars: The Eucalyptus Strikes Back",
     isLiked: false,
   },
 ];
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <div>
@@ -35,7 +37,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>React Component Testing</h1>
       <div className="card">
         <Movies movies={movies} />
       </div>
